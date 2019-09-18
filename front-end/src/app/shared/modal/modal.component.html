@@ -1,0 +1,22 @@
+<!-- Modal -->
+<div id="Modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div [ngClass]="tipoModal">
+        <h5 class="modal-title"><i [ngClass]="icon" aria-hidden="true"></i>&nbsp;{{titulo}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{mensaje}}</p>
+        <ul>
+          <li style='font-size: 10px' *ngFor="let item of errores">{{item.msg}}</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
