@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { TituloComponent } from './titulo/titulo.component';
 import { ModalComponent } from './modal/modal.component';
 
@@ -10,8 +9,7 @@ import { ModalComponent } from './modal/modal.component';
     ModalComponent
   ],
   imports: [
-    CommonModule,
-    RouterModule
+    CommonModule
   ],
   exports: [
     TituloComponent,

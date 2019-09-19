@@ -6,12 +6,7 @@ const routes: Routes = [
     {
         path: '',
         component: LayoutComponent,
-        children: [
-           /* { path: 'ingresarSocio', component: IngresarSocioComponent },
-            { path: 'buscarSocio', component: BuscarSocioComponent },
-            { path: 'bajaSocio', component: EliminarSocioComponent }*/
-            //{ path: 'blank-page', loadChildren: () => import('./blank-page/blank-page.module').then(m => m.BlankPageModule) }
-        ]
+        children: []
     }
 ];
 

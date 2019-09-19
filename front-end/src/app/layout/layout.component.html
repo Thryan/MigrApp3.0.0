@@ -1,5 +1,21 @@
 <app-header></app-header>
-<app-sidebar (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
+<app-sidebar (collapsedEvent)="receiveCollapsed($event)" (menuSeleccionado)="cargaMenu($event)"></app-sidebar>
 <section class="main-container" [ngClass]="{collapsed: collapedSideBar}">
-    <router-outlet></router-outlet>
+  <app-tabs>
+    <app-tab [tabTitle]="'Home'">
+      <h3>Home</h3>
+      PESTAÑA DE INCIO
+      <hr />
+    </app-tab>
+  </app-tabs>
+  <router-outlet></router-outlet>
 </section>
+
+<!-- TEMPLATES -->
+<ng-template #migrar>
+  <app-migrar></app-migrar>
+</ng-template>
+
+<ng-template #progreso>
+    <app-progreso></app-progreso>
+  </ng-template>
