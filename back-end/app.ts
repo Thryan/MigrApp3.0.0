@@ -15,11 +15,12 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'front-end')));
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use('/', routes);
+app.use('/api', routes);
 app.use('/api/users', users);
 app.use('/api/login', login);
 
