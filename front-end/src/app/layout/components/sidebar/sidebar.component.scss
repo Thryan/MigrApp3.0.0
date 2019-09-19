@@ -113,6 +113,8 @@ $topnav-background-color: #222;
     ul.submenu {
         display: none;
         height: 0;
+        padding-left: 25px;
+        font-size: 14px;
     }
     & .expand {
         ul.submenu {
@@ -124,6 +126,7 @@ $topnav-background-color: #222;
                     color: #fff;
                     padding: 10px;
                     display: block;
+                    cursor: pointer;
                 }
             }
         }

@@ -1,38 +1,38 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
   <div class="list-group">
-      <a routerLink="/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <a class="list-group-item">
         <i class="fa fa-fw fa-home fa-lg"></i>&nbsp;
         <span>Inicio</span>
     </a>
 
     <div class="nested-menu">
-      <a class="list-group-item" (click)="addExpandClass('pages')">
+      <a class="list-group-item" (click)="addExpandClass('migracion')">
         <i class="fa fa-fw fa-exchange fa-lg"></i>&nbsp;
         <span>Migración</span>
       </a>
-      <li class="nested" [class.expand]="showMenu === 'pages'">
+      <li class="nested" [class.expand]="showMenu === 'migracion'">
         <ul class="submenu">
           <li>
-            <a href="javascript:void(0)" (click)="seleccionaMenu('Migrar')">
-              <i class="fa fa-cog"></i>&nbsp;
+            <a (click)="seleccionaMenu('Migrar')">
+              <i class="fa fa-plus"></i>&nbsp;
               <span>Migrar</span>
             </a>
           </li>
           <li>
-            <a href="javascript:void(0)"  (click)="seleccionaMenu('Progreso')">
+            <a (click)="seleccionaMenu('Progreso')">
               <i class="fa fa-cog"></i>&nbsp;
               <span>Progreso</span>
             </a>
           </li>
           <li>
             <a href="javascript:void(0)">
-              <i class="fa fa-cog"></i>&nbsp;
+              <i class="fa fa-list-alt"></i>&nbsp;
               <span>Resultados</span>
             </a>
           </li>
           <li>
               <a href="javascript:void(0)">
-                <i class="fa fa-cog"></i>&nbsp;
+                <i class="fa fa-search"></i>&nbsp;
                 <span>Consulta Migraciones</span>
               </a>
             </li>
